@@ -1,0 +1,65 @@
+.Navbar {
+  display: flex;
+  position: relative;
+}
+
+.logo {
+  height: 4cm;
+  width: 4cm;
+  margin-left: 5px;
+  padding-bottom: 5px;
+}
+
+.corona-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(233, 39, 5, 1) 30%,
+      rgba(233, 39, 5, 0)
+    ),
+    url("./CoronaBackground.png");
+  background-size: cover;
+  background-position: end;
+  z-index: -1;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  margin-left: 40%;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+ul li a {
+  position: relative;
+}
+
+ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+ul li a:hover::before {
+  width: 100%;
+}
