@@ -1,12 +1,13 @@
 import react from 'react';
 import './style.css'
-import cooronaImage from './coorna.png';
+import cooronaImage from './corona.png';
+import Footer from './Footer/Footer';
 
 
 const Home = () => {
     return(
+        <>
         <div className='container'>
-            <div className='a'></div>
 
         <div className='nesto'>
 
@@ -42,6 +43,7 @@ const Home = () => {
          </div> 
             
         </div>
+        </>
     )
 }
 

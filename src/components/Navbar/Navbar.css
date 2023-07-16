@@ -4,9 +4,9 @@
 }
 
 .logo {
-  height: 4cm;
-  width: 4cm;
-  margin-left: 5px;
+  height: 3cm;
+  width: 3cm;
+  margin-left: 115px;
   padding-bottom: 5px;
 }
 
@@ -31,7 +31,7 @@ ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5%;
+  margin-top: 3.5%;
   margin-left: 40%;
 }
 
