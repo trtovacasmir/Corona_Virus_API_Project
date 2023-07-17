@@ -117,3 +117,11 @@ h2 {
 .two {
   color: red;
 }
+
+.country_card{
+  margin: 10px;
+  
+  height: 200px;
+  width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}

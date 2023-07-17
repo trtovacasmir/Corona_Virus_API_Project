@@ -8,6 +8,7 @@ import CovidStats from "./components/CovidStatus";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home";
 import Footer from "./components/Footer/Footer";
+import MyComponent from "./components/CovidStatus";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       </div>
       <Footer/>
     </Router>
-   
+    
+    
     </>
   );
 }

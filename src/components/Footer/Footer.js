@@ -39,7 +39,7 @@ const Footer = () => {
         </li>
       </ul>
     </div>
-    <h5 className="footer_h5"> ©Covid 19 Corporation NIT Team Two</h5>
+    <h4 className="footer_h5"> ©Covid 19 Corporation NIT Team Two</h4>
     </>
   );
 };

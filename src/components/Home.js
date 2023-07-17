@@ -14,7 +14,7 @@ const Home = () => {
         url: "https://covid-193.p.rapidapi.com/statistics",
         headers: {
           "X-RapidAPI-Key":
-            "61dba790cdmshb8f57517ebe5149p14c61djsnea99f8dd1a20",
+            "504beda31amsh83ca0de5b65ab99p1f8d59jsne12d84eb16c1",
           "X-RapidAPI-Host": "covid-193.p.rapidapi.com",
         },
       };
