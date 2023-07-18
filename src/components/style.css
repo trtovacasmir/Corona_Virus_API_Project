@@ -1,6 +1,6 @@
-/* body{
-    background-color: aquamarine;
-} */
+body {
+  overflow-x: hidden;
+}
 
 .container {
   background-color: rgb(255, 255, 255);
@@ -117,12 +117,70 @@ h2 {
 .two {
   color: red;
 }
-
+.CovidCountries {
+  margin-left: 15%;
+}
 .country_card {
-  margin: 15px;
-  border: 3px solid red;
-  height: 350px;
+
+  background-color: white;
+  margin: 10px;
+  border: 1px solid black;
+  height: 550px;
   width: 800px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 20px red;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+.country_card img {
+  margin-top: 30px;
   border-radius: 15px;
+  border: 1px solid black;
+}
+.stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.population {
+  border: 6px double green;
+  padding: 15px 50px 15px 50px;
+  margin: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.newCases {
+  border: 6px double rgb(212, 163, 0);
+  padding: 15px 50px 15px 50px;
+  margin: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.deaths {
+  border: 6px double red;
+  padding: 15px 50px 15px 50px;
+  margin: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.country-and-continent {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.country {
+  border: 1px solid black;
+  padding: 10px 150px 10px 150px;
+  margin: 10px;
+  border-radius: 15px;
+  text-decoration: underline;
+}
+.continent {
+  border: 1px solid black;
+  padding: 10px 150px 10px 150px;
+  margin: 10px;
+  border-radius: 15px;
+}
+.pagination {
+  margin-top: 100px;
 }
