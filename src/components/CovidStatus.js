@@ -38,14 +38,18 @@ const CovidStats = () => {
     axios
       .get("https://restcountries.com/v3.1/all")
       .then((response) => {
-        setCountryFlags(response.data);
+        const flags = response.data.map((flag) => {
+          const flagName = flag.name.common.replace(/ /g, "-").toLowerCase();
+          return { ...flag, name: flagName };
+        });
+        setCountryFlags(flags);
       })
       .catch((error) => {
         console.error(error);
       });
   };
 
-  const renderCountryStats = (country) => {
+  const renderCountryStats = (country, index) => {
     const {
       country: countryName,
       continent,
@@ -54,10 +58,10 @@ const CovidStats = () => {
       deaths,
     } = country;
     const countryFlag = countryFlags.find(
-      (flag) => flag.name.common === countryName
+      (flag) => flag.name === countryName.toLowerCase()
     );
 
-    if (countryFlag) {
+    if (countryFlag && index < itemsPerPage) {
       return (
         <div className="country_card_bure" key={countryName}>
           <div className="country_card_flag">
@@ -121,21 +125,14 @@ const CovidStats = () => {
     setPage(value);
   };
 
-  // Izračunajte ukupan broj stranica
   const pageCount = Math.ceil(countries.length / itemsPerPage);
-
-  // Izračunajte koji indeks prve kartice na trenutnoj stranici
   const startIndex = (page - 1) * itemsPerPage;
-
-  // Izračunajte koji indeks poslednje kartice na trenutnoj stranici
   const endIndex = Math.min(startIndex + itemsPerPage, countries.length);
-
-  // Izdvojite kartice koje će biti prikazane na trenutnoj stranici
   const displayedCountries = countries.slice(startIndex, endIndex);
 
   return (
     <div className="CovidCountries">
-      {displayedCountries.map((country) => renderCountryStats(country))}
+      {displayedCountries.map((country, index) => renderCountryStats(country, index))}
       <Box sx={{ mt: 2 }}>
         <Pagination
           className="pagination"

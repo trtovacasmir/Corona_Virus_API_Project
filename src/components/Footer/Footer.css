@@ -43,12 +43,35 @@
     font-size: 28px;
     cursor: pointer;
   }
+  .fa-facebook:hover{
+    color: #1877f2
+  }
 
 
   .fa-twitter {
     color: red;
     font-size: 28px;
     cursor: pointer;
+  }
+  .fa-twitter:hover{
+    color: #1da1f2;
+  }
+
+  .fa-github {
+    color: red;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .fa-github:hover{
+    color: #333333;
+  }
+  .fa-linkedin {
+    color: red;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .fa-linkedin:hover{
+    color: #0077b5;
   }
 
   .footer_h5{
