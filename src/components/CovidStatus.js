@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import axios from "axios";
 import { Box, Pagination } from "@mui/material";
+import Country_image from './country.png';
+import Continent_image from './continent.png';
 
 const CovidStats = () => {
   const [countries, setCountries] = useState([]);
@@ -37,7 +39,6 @@ const CovidStats = () => {
       .get("https://restcountries.com/v3.1/all")
       .then((response) => {
         setCountryFlags(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -58,32 +59,55 @@ const CovidStats = () => {
 
     if (countryFlag) {
       return (
-        <div className="country_card" key={countryName}>
-          <div className="image">
-            {" "}
-            <img src={countryFlag.flags.png} alt={countryName} />
+        <div className="country_card_bure" key={countryName}>
+          <div className="country_card_flag">
+            <img
+              className="country_card_image"
+              src={countryFlag.flags.png}
+              alt={countryName}
+            />
           </div>
-          <div className="country-and-continent">
-            <div className="continent">
-              {" "}
-              <h3>{continent}</h3>
+
+          <div className="country_card_cc">
+            <div className="country_card_cc_continent">
+              <img
+                className="country_card_cc_continent_continetn_image"
+                src={Continent_image}
+                alt="Continent"
+              />
+              <h2>{continent}</h2>
             </div>
-            <div className="country">
-              {" "}
-              <h3>{countryName}</h3>
+            <div className="country_card_cc_continent_country">
+              <img
+                className="country_card_cc_continent_country_image"
+                src={Country_image}
+                alt="Country"
+              />
+              <h2>{countryName}</h2>
             </div>
           </div>
-          <div className="stats">
-            <div className="population">
-              {" "}
-              <h5>Population: {population}</h5>
+
+          <div className="country_card_data">
+            <div className="country_card_population">
+              <h5>
+                Population:
+                <br />
+                {population}
+              </h5>
             </div>
-            <div className="newCases">
-              <h5>New Cases: {cases.new || "0"}</h5>
+            <div className="country_card_active_cases">
+              <h5>
+                Active Cases:
+                <br />
+                {cases.active}
+              </h5>
             </div>
-            <div className="deaths">
-              {" "}
-              <h5>Deaths: {deaths.total || "0"}</h5>
+            <div className="country_card_deaths">
+              <h5>
+                Deaths:
+                <br />
+                {deaths.total}
+              </h5>
             </div>
           </div>
         </div>
@@ -97,12 +121,17 @@ const CovidStats = () => {
     setPage(value);
   };
 
-  const total = countries.length;
-  const pageCount = Math.ceil(total / itemsPerPage);
-  const displayedCountries = countries.slice(
-    (page - 1) * itemsPerPage,
-    page * itemsPerPage
-  );
+  // Izračunajte ukupan broj stranica
+  const pageCount = Math.ceil(countries.length / itemsPerPage);
+
+  // Izračunajte koji indeks prve kartice na trenutnoj stranici
+  const startIndex = (page - 1) * itemsPerPage;
+
+  // Izračunajte koji indeks poslednje kartice na trenutnoj stranici
+  const endIndex = Math.min(startIndex + itemsPerPage, countries.length);
+
+  // Izdvojite kartice koje će biti prikazane na trenutnoj stranici
+  const displayedCountries = countries.slice(startIndex, endIndex);
 
   return (
     <div className="CovidCountries">
