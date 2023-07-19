@@ -3,6 +3,7 @@ import "./style.css";
 import cooronaImage from "./corona.png";
 import Footer from "./Footer/Footer";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [worldStats, setWorldStats] = useState(null);
@@ -74,9 +75,15 @@ const Home = () => {
               </>
             )}
 
-            <div id="t" className="four">
-              <h5>Country Stats</h5>
-            </div>
+            <Link
+              id="t"
+              className="four"
+              to="/country"
+              exact
+              activeClassName="active"
+            >
+              <span className="textHome"> Country Stats</span>
+            </Link>
           </div>
         </div>
       </div>
