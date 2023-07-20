@@ -74,9 +74,9 @@ const Home = () => {
               </>
             )}
 
-            <div id="t" className="four">
+            <a href="/country" id="t" className="four">
               <h4>Country Stats</h4>
-            </div>
+            </a>
           </div>
         </div>
       </div>
