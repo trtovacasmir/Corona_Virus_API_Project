@@ -40,7 +40,7 @@ const Footer = () => {
         </li>
       </ul>
     </div>
-    <h4 className="footer_h5"> ©Covid 19 Corporation NIT Team Two</h4>
+    <h4 className="footer_h5"> ©Covid 19 NIT Team II</h4>
     </>
   );
 };

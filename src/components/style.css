@@ -287,3 +287,11 @@ h2 {
   align-items: center;
   flex-direction: column;
 }
+
+
+.bodyCovid{
+  display: flex;
+  height: 80vh;
+  justify-content: flex-start;
+  flex-direction: column;
+}

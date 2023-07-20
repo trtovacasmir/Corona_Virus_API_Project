@@ -10,24 +10,26 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const AboutUs = () => {
   return (
     <div className="about_container">
-      <h1>OUR CORONA TEAM</h1>
+      <h1>Our Corona Team</h1>
     <div class="about_cards">
         <div class="about_card">
-          <img src={Profile}></img>
+          <img className="profile" src={Profile}></img>
             <h1>Asmir Trtovac</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero?</p>
+            <div className="about_hover">
+            <p className="about_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero?</p>
             <div className="about_icons">
             <FontAwesomeIcon icon={faFacebook} />
             <FontAwesomeIcon icon={faTwitter} />
             <FontAwesomeIcon icon={faGithub} />
             <FontAwesomeIcon icon={faLinkedin} />
             </div>
+            </div>
         </div>
 
         <div class="about_card">
-          <img src={Profile}></img>
+          <img className="profile" src={Profile}></img>
             <h1>Amil Kahrovic</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero?</p>
+            <p className="about_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero?</p>
             <div className="about_icons">
             <FontAwesomeIcon icon={faFacebook} />
             <FontAwesomeIcon icon={faTwitter} />
@@ -37,9 +39,9 @@ const AboutUs = () => {
         </div>
 
         <div class="about_card">
-          <img src={Profile}></img>
+          <img className="profile" src={Profile}></img>
             <h1>Nikola Bozovic</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero?</p>
+            <p className="about_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero?</p>
             <div className="about_icons">
             <FontAwesomeIcon icon={faFacebook} />
             <FontAwesomeIcon icon={faTwitter} />
