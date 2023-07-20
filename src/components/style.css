@@ -75,10 +75,12 @@ body {
 
 .home_data {
   margin-top: 70px;
-  width: 80%;
-  height: 250px;
+  width: 82%;
+  height: 270px;
   background-color: red;
   border-radius: 15px;
+  margin-bottom: 40px;
+  
 }
 .home_data h2 {
   color: white;
@@ -89,14 +91,14 @@ body {
   width: 100%;
   height: 150px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .parenvt_four_div p {
   margin-top: -20px;
 }
 #t {
-  height: 70px;
+  height: 80px;
   width: 250px;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
@@ -114,9 +116,38 @@ h2 {
 
 .one {
   color: green;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.one p{
+  font-weight: bold;
+}
+.two p{
+  font-weight: bold;
+}
+.three p{
+  font-weight: bold;
+
 }
 .two {
   color: red;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.three{
+  color: blue;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .CovidCountries {
   padding-top: 10px;

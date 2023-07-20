@@ -68,14 +68,14 @@ const Home = () => {
                   <p>{worldStats.deaths.total}</p>
                 </div>
                 <div id="t" className="three">
-                  <h5>Active Cases</h5>
+                  <h4>Active Cases</h4>
                   <p>{worldStats.cases.active}</p>
                 </div>
               </>
             )}
 
             <div id="t" className="four">
-              <h5>Country Stats</h5>
+              <h4>Country Stats</h4>
             </div>
           </div>
         </div>
